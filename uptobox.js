@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         for (var i = 0; i < anchors.length; i++) {
             var hostname = go_get_host_name(anchors[i].getAttribute("href"));
             if (hostname.length > 0 && shorten_includ.indexOf(hostname) > -1) {
-                anchors[i].href = go_url + "&id=" + encodeURIComponent(anchors[i].href)
+                anchors[i].href = go_url + "uptobox.php?id=" + encodeURIComponent(anchors[i].href)
             } else {
                 if (anchors[i].protocol === "magnet:") {
                     anchors[i].href = go_url + "uptobox.php?id=" + encodeURIComponent(anchors[i].href)
@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
         for (var i = 0; i < anchors.length; i++) {
             var hostname = go_get_host_name(anchors[i].getAttribute("href"));
             if (hostname.length > 0 && shorten_exclude.indexOf(hostname) === -1) {
-                anchors[i].href = go_url + "full/?api=" + encodeURIComponent(api) + "&url=" + encodeURIComponent(anchors[i].href) + "&type=" + encodeURIComponent(advert_type)
+                anchors[i].href = go_url + "uptobox.php?id=" + encodeURIComponent(anchors[i].href)
             } else {
                 if (anchors[i].protocol === "magnet:") {
-                    anchors[i].href = go_url + "full/?api=" + encodeURIComponent(api) + "&url=" + encodeURIComponent(anchors[i].href) + "&type=" + encodeURIComponent(advert_type)
+                    anchors[i].href = go_url + "uptobox.php?id=" + encodeURIComponent(anchors[i].href)
                 }
             }
         }
