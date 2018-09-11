@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 anchors[i].href = go_url + "&id=" + encodeURIComponent(anchors[i].href)
             } else {
                 if (anchors[i].protocol === "magnet:") {
-                    anchors[i].href = go_url + "full/?api=" + encodeURIComponent(api) + "&url=" + encodeURIComponent(anchors[i].href) + "&type=" + encodeURIComponent(advert_type)
+                    anchors[i].href = go_url + "uptobox.php?id=" + encodeURIComponent(anchors[i].href)
                 }
             }
         }
